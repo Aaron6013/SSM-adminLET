@@ -44,4 +44,5 @@
         cglib代理，生成子类对象，proxy-target-class="true" 默认使用cglib的方式
     -->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
+
 </beans>

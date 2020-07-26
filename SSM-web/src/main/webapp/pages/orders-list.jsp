@@ -242,7 +242,7 @@
 								<tbody>
 
 
-									<c:forEach items="${pageInfo.list}" var="orders">
+									<c:forEach items="${orderInfo.list}" var="orders">
 
 										<tr>
 											<td><input name="ids" type="checkbox"></td>
@@ -315,7 +315,7 @@
                 <div class="box-footer">
                     <div class="pull-left">
                         <div class="form-group form-inline">
-                            总共 ${pageInfo.pages} 页，共  ${pageInfo.total} 条数据。 每页
+                            总共 ${orderInfo.pages} 页，共  ${orderInfo.total} 条数据。 每页
                             <select class="form-control" id="changePageSize" onchange="changePageSize()">
                                 <option>1</option>
                                 <option>2</option>
@@ -329,15 +329,15 @@
                     <div class="box-tools pull-right">
                         <ul class="pagination">
                             <li>
-                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=1&size=${pageInfo.size}" aria-label="Previous">首页</a>
+                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=1&size=${orderInfo.size}" aria-label="Previous">首页</a>
                             </li>
-                            <li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum-1}&size=${pageInfo.size}">上一页</a></li>
-							<c:forEach begin="1" end="${pageInfo.pages}" var="pageNum">
-								<li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageNum}&size=${pageInfo.size}">${pageNum}</a></li>
+                            <li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${orderInfo.pageNum-1}&size=${orderInfo.size}">上一页</a></li>
+							<c:forEach begin="1" end="${orderInfo.pages}" var="pageNum">
+								<li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageNum}&size=${orderInfo.size}">${pageNum}</a></li>
 							</c:forEach>
-							<li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum+1}&size=${pageInfo.size}">下一页</a></li>
+							<li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${orderInfo.pageNum+1}&size=${orderInfo.size}">下一页</a></li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pages}&size=${pageInfo.size}" aria-label="Next">尾页</a>
+                                <a href="${pageContext.request.contextPath}/orders/findAll.do?page=${orderInfo.pages}&size=${orderInfo.size}" aria-label="Next">尾页</a>
                             </li>
                         </ul>
                     </div>

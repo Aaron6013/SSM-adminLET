@@ -56,4 +56,6 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
     <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <aop:aspectj-autoproxy/>
 </beans>

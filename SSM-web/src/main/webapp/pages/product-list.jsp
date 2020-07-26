@@ -333,15 +333,15 @@
 						<div class="box-tools pull-right">
 							<ul class="pagination">
 								<li>
-									<a href="${pageContext.request.contextPath}/orders/findAll.do?page=1&size=${pageInfo.size}" aria-label="Previous">首页</a>
+									<a href="${pageContext.request.contextPath}/product/findAll.do?page=1&size=${pageInfo.size}" aria-label="Previous">首页</a>
 								</li>
-								<li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum-1}&size=${pageInfo.size}">上一页</a></li>
+								<li><a href="${pageContext.request.contextPath}/product/findAll.do?page=${pageInfo.pageNum-1}&size=${pageInfo.size}">上一页</a></li>
 								<c:forEach begin="1" end="${pageInfo.pages}" var="pageNum">
-									<li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageNum}&size=${pageInfo.size}">${pageNum}</a></li>
+									<li><a href="${pageContext.request.contextPath}/product/findAll.do?page=${pageNum}&size=${pageInfo.size}">${pageNum}</a></li>
 								</c:forEach>
-								<li><a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum+1}&size=${pageInfo.size}">下一页</a></li>
+								<li><a href="${pageContext.request.contextPath}/product/findAll.do?page=${pageInfo.pageNum+1}&size=${pageInfo.size}">下一页</a></li>
 								<li>
-									<a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pages}&size=${pageInfo.size}" aria-label="Next">尾页</a>
+									<a href="${pageContext.request.contextPath}/product/findAll.do?page=${pageInfo.pages}&size=${pageInfo.size}" aria-label="Next">尾页</a>
 								</li>
 							</ul>
 						</div>
@@ -468,7 +468,7 @@
 			var pageSize = $("#changePageSize").val();
 
 			//向服务器发送请求，改变没页显示条数
-			location.href = "${pageContext.request.contextPath}/orders/findAll.do?page=1&size="
+			location.href = "${pageContext.request.contextPath}/product/findAll.do?page=1&size="
 					+ pageSize;
 		}
 		$(document).ready(function() {
