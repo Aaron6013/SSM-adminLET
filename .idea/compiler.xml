@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SSM-service" />
         <module name="SSM-dao" />
-        <module name="SSM-web" />
-        <module name="SSM-utils" />
         <module name="SSM-domain" />
+        <module name="SSM-utils" />
+        <module name="SSM-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
